@@ -53,7 +53,7 @@ public class SunnysideLifesteal implements ModInitializer {
         @Override
         public void afterRespawn(ServerPlayerEntity oldPlayer, ServerPlayerEntity newPlayer, boolean alive) {
             HealthMap.put(newPlayer.getUuid(), HealthMap.get(oldPlayer.getUuid()));
-            newPlayer.damage(DamageSource.CACTUS, 0);
+            newPlayer.damage(DamageSource.CACTUS, 20.0f-((float) HealthMap.get(oldPlayer.getUuid()).doubleValue()));
         }
     }
 

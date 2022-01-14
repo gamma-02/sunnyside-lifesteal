@@ -34,14 +34,8 @@ public class ClientUtils {
 
             }else{
                 client.gameRenderer.showFloatingItem(FILLED_CONTAINER.getDefaultStack());
-                NbtCompound fireworks = new NbtCompound();
-                List<Integer> dyes = new ArrayList<>();
-                for (int i = 0; i < DyeColor.values().length; i++) {dyes.add(i);}
-                fireworks.putIntArray(FireworkRocketItem.COLORS_KEY, dyes);
-                fireworks.putInt(FireworkRocketItem.TYPE_KEY, 1);
-                fireworks.putBoolean(FireworkRocketItem.TRAIL_KEY, true);
-                fireworks.putBoolean(FireworkRocketItem.FLICKER_KEY, true);
-                client.particleManager.addParticle(new FireworksSparkParticle.FireworkParticle(client.world, player.getX(), player.getY(), player.getZ(), player.getVelocity().x, player.getVelocity().y, player.getVelocity().z, client.particleManager, fireworks));
+
+
 
             }
         }

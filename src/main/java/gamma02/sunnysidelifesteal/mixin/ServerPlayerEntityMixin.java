@@ -35,8 +35,8 @@ public abstract class ServerPlayerEntityMixin extends PlayerEntity {
     public void onDeathMixin(DamageSource source, CallbackInfo ci){
         if(source.getAttacker() instanceof PlayerEntity && HealthMap.containsKey(source.getAttacker().getUuid()) && HealthMap.containsKey(this.getUuid())){
             if(HealthMap.get(this.getUuid()) >= 10) {
-                HealthMap.put(this.getUuid(), this.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).getBaseValue() - 1);
-                HealthMap.put(source.getAttacker().getUuid(), HealthMap.get(source.getAttacker().getUuid()) + 1);
+                HealthMap.put(this.getUuid(), this.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).getBaseValue() - 2);
+                HealthMap.put(source.getAttacker().getUuid(), HealthMap.get(source.getAttacker().getUuid()) + 2);
             }
         }
     }
