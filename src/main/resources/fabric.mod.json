@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "sunnyside-lifesteal",
+  "version": "${version}",
+  "name": "Sunnyside Lifesteal",
+  "description": "",
+  "authors": [
+    "gamma_02"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/sunnyside-lifesteal/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "gamma02.sunnysidelifesteal.client.SunnysideLifestealClient"
+    ],
+    "main": [
+      "gamma02.sunnysidelifesteal.SunnysideLifesteal"
+    ]
+  },
+  "accessWidener" : "sunnyside-lifesteal.aw",
+  "mixins": [
+    "sunnyside-lifesteal.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.12.12",
+    "fabric": "*",
+    "minecraft": "1.18.1"
+  }
+}
